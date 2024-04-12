@@ -1,0 +1,64 @@
+.pai{
+    background-color:rgb(156, 151, 151);
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+}
+.container{
+    
+    height: 310px;
+    width: 300px;
+    margin: auto;
+    margin-top: center;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0,0 10px rgba (0, 0, 0, .2);
+    border-color: white;
+
+}
+.tit{
+    text-align: center;
+    font-style:italic;
+    color: #D1E7F6;
+    
+}
+.container label{
+    color: white;
+}
+.forms{
+    width: 290px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    border-color:#06C0DF;
+    outline: none;
+}
+
+.container input{
+    font-size: 13px;
+    color: black;
+}
+.butAdd{
+    width: 290px;
+    background-color:midnightblue;
+    border-radius: 20px;
+    border-color: midnightblue;
+    cursor: pointer;
+    color: gray;
+}
+#userCards{
+    color: gray;
+    flex-wrap: wrap;
+    background-color:midnightblue;
+    display: flex;
+    padding: 20px;
+    height: 100%;
+    gap: 15px;
+}
+body{
+    background-color: midnightblue;
+    height: 100%;
+    margin: 0;
+}
