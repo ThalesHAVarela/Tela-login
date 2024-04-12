@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>telaforms</title>
+    <link rel="stylesheet" href="styleindex.css">
+</head>
+<body>
+    <div class="pai">
+        <div class = "container">
+            <form id="meuForm" method="POST" action='telausers.html'>
+                <h2 class="tit"> Cadastre-se</h2></br>
+
+                <input type="hidden" class="id" id="">
+
+                <label id="nomes"> Nome: </label>
+                <input type="text" class="forms" id="nome" name="nome" placeholder="Digite seu nome" required></br>
+                </br>
+                
+                <label id="idades"> Idade: </label>
+                <input type="number" class="forms" id="idade" name="idade" placeholder=" Digite sua idade" required></br>
+                </br>
+                
+                <label id="e-mails"> E-mail: </label>
+                <input type="email" class="forms" id="email"  name="email" placeholder="Digite seu e-mail" required></br>
+                </br>
+                </br>
+
+                <button type="submit" class= "butAdd" > Entrar</button>
+                
+            </form>
+        </div>
+    </div>
+    <div id="userCards">
+            
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
