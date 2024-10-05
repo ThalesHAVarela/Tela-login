@@ -16,9 +16,11 @@ function adicionar(e){
     const idade = data.get('idade');
     const email = data.get('email');
 
-    console.log("enviando dados ...")
+    if(idade >= 0){
 
-    fetch("http://localhost:3000/nomes/", {
+    console.log("enviando dados ...");
+
+    fetch("http://localhost:3000/nomes", {
         method :'POST',
         body : JSON.stringify({
             nome : nome,
@@ -30,6 +32,9 @@ function adicionar(e){
         }
     }).then((Response) => Response.json()).
     then((json) => window.location.reload())
+    }else{
+        alert("Coloque uma idade válida")
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -40,10 +45,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     fetch("http://localhost:3000/nomes").
     then(Response => Response.json()).
     then(dados => {
-    var users = dados.map(user => "<div></p>Nome : " + user.nome + "</br>Idade : " + user.idade + "</br>Email : " + user.email + "</br> </p> <button onClick=apagar(\"" + user.id + "\")>apagar</button></div>").join('')
+    var users = dados.map(user => "<div></p>Nome : " + user.nome + "</br>Idade : " + user.idade + "</br>Email : " + user.email + "</br> </p> <button onClick=apagar(\"" + user.id + "\")>Excluir</button></div>").join('')
     document.getElementById("userCards").innerHTML = users
 
     //console.log(users)
 }).
     catch (erro => console.log(erro))
   });
+
